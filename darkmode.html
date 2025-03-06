@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkmode</title>
+ <body>
+    
+     <style> 
+
+         body{
+             display: flex;
+             align-items: center;
+             justify-content: right;
+             background-color: lightblue;
+             transition: background-color 3s ease;
+             flex-direction: column;
+         }
+         
+.checkbox {
+            appearance: none;
+            background-color: darkblue;
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            cursor:pointer;
+            position: absolute;
+            left: calc(100% - 97px);
+            transition: left 2s ease;
+        }
+.checkbox:checked{
+             background-color: lightblue;
+             left: calc(100% - 59px);
+             
+         }
+.checkboxT {
+            appearance: none;
+            position: absolute;
+            background-color: darkgreen;
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            cursor:pointer;
+            left: calc(100% - 97px);
+            transition: left 2s ease;
+        }
+    
+.checkboxT:checked{
+             background-color: lightgreen;
+             left: calc(100% - 59px);
+         }
+         
+         .container {
+             position: relative;
+             background-color: orange;
+             width: 100px;
+             height: 56px;
+             border-radius:28px;
+             display: flex;
+             align-items: center;
+             justify-content: left;
+         }
+
+          .container2 {
+            position: relative;
+             background-color: yellow;
+             width: 100px;
+             height: 56px;
+             border-radius:28px;
+             display: flex;
+             align-items: center;
+             justify-content: left;
+         }
+
+.container3 {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+         
+        </style>
+
+<div>
+     
+<div class="container">
+<input type="checkbox" class="checkbox" id="myCheckbox">
+</div>
+
+<div class="container2">
+<input type="checkbox" class="checkboxT" id="myCheckboxT">
+</div>
+
+</div>
+     
+     <div class="container3">test</div>
+
+     
+<script>
+
+    const checkbox = document.getElementById('myCheckbox');
+    const body = document.body;
+
+    checkbox.addEventListener('change', function(){
+        if (this.checked){
+            body.style.backgroundColor= 'darkblue';
+        }else {
+            body.style.backgroundColor= 'lightblue';
+    }
+    });
+    
+
+    const checkboxT = document.getElementById('myCheckboxT');
+    const container3 = document.querySelector('.container3');
+
+    checkboxT.addEventListener('change', function(){
+        if (this.checked){
+            container3.style.display = 'none';
+        }else {
+            container3.style.display = 'flex';
+    }
+    });
+ 
+
+    
+        
+</script>
+        
+    
+</body>
+</html>
