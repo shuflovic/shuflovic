@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f5f0e6; /* Light beige-brown background */
-    color: #3c2f2f; /* Dark brown text */
+    background-color: #8b6f47; /* Light beige-brown background */
+    color: #fff; /* Dark brown text */
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
