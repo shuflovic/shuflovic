@@ -118,7 +118,7 @@ a:hover {
     .sidebar {
         width: 100px;
     }
-    .sidebar-right {
+    .right-sidebar {
         display: none;
     }
     header, main {
