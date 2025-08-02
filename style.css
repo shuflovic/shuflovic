@@ -76,7 +76,7 @@ main {
     background-color: #8b6f47; /* Very light brown content background */
     padding: 1.5rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     overflow-wrap: break-word; /* Ensure text wraps within container */
 }
