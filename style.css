@@ -139,7 +139,7 @@ a:hover {
 .button {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #8b6f47; /* Medium brown, same as sidebar */
+    background-color: #5c4033;
     color: #f4e8d1; /* Light cream-brown, same as sidebar links */
     text-decoration: none;
     border: none;
