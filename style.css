@@ -5,13 +5,14 @@ body {
     line-height: 1.6;
     background-color: #f5f0e6; /* Light beige-brown background */
     color: #3c2f2f; /* Dark brown text */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 200px;
+    width: 150px; /* Reduced width for better fit on smaller screens */
     background-color: #8b6f47; /* Medium brown sidebar */
     color: #fff;
     padding: 1rem;
@@ -27,7 +28,7 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Slightly smaller for compact layout */
     margin: 0 0 1rem;
     color: #f4e8d1; /* Light cream-brown for headings */
 }
@@ -46,7 +47,7 @@ body {
 }
 
 .sidebar a:hover, .sidebar a.active {
-    background-color: #a68a64; /* Slightly lighter brown for hover/active */
+    background-color: #a68a64; /* Lighter brown for hover/active */
     border-radius: 5px;
 }
 
@@ -55,26 +56,28 @@ header {
     color: #f4e8d1; /* Light cream-brown text */
     text-align: center;
     padding: 1rem;
-    margin: 0 200px; /* Match sidebar widths */
+    margin: 0 150px; /* Match sidebar widths */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Slightly smaller for better fit */
 }
 
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 0 160px; /* Adjusted to account for sidebar widths + padding */
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .content-section {
     display: none;
     background-color: #fff8e7; /* Very light brown content background */
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* Ensure text wraps within container */
 }
 
 .content-section.active {
@@ -83,6 +86,7 @@ main {
 
 h2 {
     color: #5c4033; /* Darker brown for section headings */
+    font-size: 1.5rem;
 }
 
 a {
@@ -92,4 +96,32 @@ a {
 a:hover {
     text-decoration: underline;
     color: #a68a64; /* Lighter brown for link hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 800px) {
+    .sidebar {
+        width: 120px; /* Smaller sidebars for narrow screens */
+    }
+    header, main {
+        margin: 0 130px; /* Adjust margins for smaller sidebars */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100px;
+    }
+    header, main {
+        margin: 0 110px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .content-section {
+        padding: 1rem;
+    }
+    .sidebar h2 {
+        font-size: 1.1rem;
+    }
 }
