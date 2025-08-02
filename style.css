@@ -75,7 +75,7 @@ main {
     display: none;
     background-color: #8b6f47; /* Very light brown content background */
     padding: 1.5rem;
-    border: 1px solid #8b6f47;
+    border: 1px solid #5c4033;
     border-radius: 5px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
