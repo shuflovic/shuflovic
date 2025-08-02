@@ -1,69 +1,705 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #3498db;
+  font-size: 0.95em;
+  font-family: sans-serif;
+  margin: 0;
+  padding-top: 5px;
+  padding:10px;
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+.logo {
+      display: flex;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    }
+      
+    .logo-part1 {
+      background-color: lightblue;
+      padding: 10px 15px;
+      color: black;
+      border-top: 3px solid lightblue;
+      border-bottom: 3px solid lightblue;
+    }
+    .logo-part2 {
+      color: lightblue;
+      padding: 10px 15px;
+      border-top: 3px solid lightblue;
+      border-bottom: 3px solid lightblue;
+      margin-left: 4px;
+    }
+
+#trip-container a{
+  color: #3498DB;
+}
+
+hr {
+  border: 1px solid #3498DB;
+}
+
+.remove-task, #add-new-task {
+  color: black;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Ensures it stays in place */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centers the modal */
+    width: 300px; /* Adjust width as needed */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 9999; /* Ensures it stays on top of everything */
+}
+
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    margin: 5px;
+}
+
+input, textarea, select {
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+.createButton {
+  background-color: lightblue;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+}
+
+.createButton:hover {
+  color: aliceblue;
+  background-color: #3498DB;
+  transform: scale(1.03);
+}
+
+.kmail a {
+  color: #3498DB;
+  
+}
+
+.submit, #submit {
+  background-color: lightblue;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+}
+
+.submit:hover, #submit:hover {
+  background-color: #3498DB;
+  color: white;
+  transform: scale(1.03);
+}
+
+.split {
+  width: 75%;
+  text-align: center;
+}
+
+.icon1 {
+  height: 30px;
+  width: 30px;
+}
+
+.screen img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.button1 {
+  background-color: darkblue;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button2 {
+  background-color: darkred;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button2:hover {
+  background-color: crimson;
+  transform: scale(1.03);
+}
+
+.button1:hover {
+  background-color: #3498DB;
+  transform: scale(1.03);
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 20px 0;
+  color: lightblue;
+}
+#hide1, #hide2 {
+    display: none;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
-}
-
-nav a:hover, nav a.active {
-    background-color: #555;
-    border-radius: 5px;
+.motto {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 10px;  
+  color: aliceblue;
 }
 
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  
 }
 
-.content-section {
-    display: none;
-    background-color: #fff;
-    padding: 2rem;
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.content-section, .kcontent-section {
+  font-size: 0,95em;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  overflow: auto;
+  border: 1px solid #3498DB;
+  color: white;
+}
+
+.content-section:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform:scale(1.02);
+}
+
+.kcontent-section:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.remove-task:hover {
+  transform: scale(1.03);
+  background-color: #3498DB;
+  color: aliceblue;
+  border: 0
+}
+
+.trip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+ .remove-task, {
+  background-color: lightblue;
+  padding: 4px 6px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 0;
+  /*font-size: 0,95em;*/
+}
+
+.blink-button a:hover, .blink-button:hover {
+  color: white;
+  background-color: #3498DB;
+}
+
+.blink-button {
+    background-color: lightblue;
+    animation: blink 1.5s infinite;
+    padding: 5px 10px;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.content-section.active {
-    display: block;
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-h2 {
-    color: #333;
+.whatsappButton{
+  background-color: lightblue;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.whatsappButton:hover{
+  transform: scale(1.05);
+  color: aliceblue;
+  background-color: #3498DB;
+  border: 1px solid white;
+}
+.whatsappButton:active{
+  transform: scale(1.03);
+  background-color: black;
 }
 
-a {
-    color: #0066cc;
+footer {
+  text-align: center;
+  padding: 5px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid #3498DB;
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+        grid-template-columns: 1fr;
+  }
+  .screen img {
+    width: 100%;
+  }
+  #add-new-task {
+    display: block !important;
+  }
+    .menu {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                width: 95%;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+      
+    .menu-toggle {
+                display: block;
+            }
+    main {
+        width: 95%; /* Adjust width for mobile */
+    }
+  nav a {
+    text-decoration: none;
+  }
+}
+
+table {
+  width: 100%; /* Tabuľka sa roztiahne na celú šírku kontajnera */
+  border-collapse: collapse; /* Zlúči okraje buniek */
+  margin-bottom: 8px; /* Pridá medzeru pod tabuľku */
+}
+
+th, td {
+  border: 1px solid #ddd; 
+  padding: 8px;
+  text-align: center; 
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+th {
+  background-color: #3498DB;
+  font-weight: bold; /* Tučné písmo pre hlavičku tabuľky */
+}
+
+table, th, td {
+    font-size: 0.95em;
+    font-weight: normal;
+    text-align: left;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+
+nav {       
+            padding: 10px;
+            position: fixed;
+            color: white;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            width: 20%;
+            border-radius:10px;
+           text-align: center;
+    }
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.content-section a, .kcontent-section {
+  text-decoration: none;
+}
+
+#kam a, #info a, #ako a, #car a, #cestaspat a {
+  text-decoration: none;
+  color: #3498DB;
+}
+button {
+  border: 0;
+  padding: 4px;
+  border-radius: 5px;
+  margin: 3px;
+  background-color: lightblue;
+  color: white;
+  }
+
+button a{
+     color: black;
+ }
+
+button:hover {
+    transform: scale(1.03);
+    background-color: #3498DB;
+    color: white;
+}
+
+button:hover a{
+  color: inherit;
+}
+.menu-btn:hover{
+  background-color: #3498DB;
+}
+
+.menu-btn.active,
+.menu-btn.active a {
+  background-color: #3498DB;
+  color: white;
+  transform: scale(1.05);
 }
 
 a:hover {
-    text-decoration: underline;
+font-size: 1.05em;  
+}
+
+.preview-section {
+            background-color: black;
+            border: 1px solid #3498DB;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+            color: white;
+        }
+.preview-title {
+            color: aliceblue;
+            margin-bottom: 15px;
+        }
+.preview-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: darkblue;
+        }
+.preview-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            flex-grow: 1;
+        }
+.preview-label {
+            font-weight: bold;
+            color: black;
+            font-size: 0.9em;
+        }
+.preview-value {
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+
+#addcommentButton {
+  color: black;
+}
+
+.trip-item, .trip-button {
+  color: aliceblue;
+  background-color: #3498DB;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.trip-item:hover, .trip-button:hover {
+  background-color: aliceblue;
+  color: #3498DB;
+}
+
+/* Quiz Container and Elements */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+/* Quiz Cards and Messages */
+.card {
+    background: #191919;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #3498DB;
+    color: white;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.message.error {
+    background-color: #5E1212;
+    color: #FF8A8A;
+}
+
+.message.success {
+    background-color: #11301D;
+    color: #7CFF96;
+}
+
+/* Quiz List and Items */
+.quiz-list {
+    list-style: none;
+    padding: 0;
+}
+
+.quiz-item {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quiz-item:hover {
+    background-color: #191970;
+    color: white;
+    transform: scale(1.02);
+}
+
+.quiz-title {
+    color: aliceblue;
+    font-weight: 500;
+}
+
+/* Quiz Row Layout */
+.quiz-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.quiz-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.vote-btn, .results-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px; /* Match your other button styles */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vote-btn {
+    background-color: lightblue;
+    color: black;
+}
+
+.vote-btn:hover {
+    background-color: #3498DB;
+    color: white;
+    transform: scale(1.03);
+}
+
+.results-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.results-btn:hover {
+    background-color: #0b7dda;
+    transform: scale(1.03);
+}
+
+/* Form Elements */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 16px;
+    /*background-color: #222;
+    color: white;*/
+    margin-bottom: 15px;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #3498DB;
+}
+
+/* Radio Buttons */
+.option-radio {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.option-radio:hover {
+    background-color: #1a1a1a;
+}
+
+.option-radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.option-radio label {
+    color: white;
+    display: inline;
+    margin-left: 8px;
+}
+
+.vote-count {
+    font-size: 12px;
+    color: #aaa;
+    margin-left: 5px;
+}
+
+/* Results Display */
+.result-item {
+    margin-bottom: 20px;
+}
+
+.result-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.option-text {
+    font-weight: bold;
+}
+
+.vote-stats {
+    color: #aaa;
+}
+
+.result-bar-container {
+    background-color: #333;
+    border-radius: 4px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.result-bar {
+    background-color: #3498DB; /* Match your theme color */
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.total-votes {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right;
+    color: lightblue;
+}
+
+/* Option Items in Create Quiz Form */
+.option-item {
+    margin-bottom: 10px;
+}
+
+.option-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
+}
+
+#add-option {
+    background-color: lightblue;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#add-option:hover {
+    background-color: #3498DB;
+    color: white;
+    transform: scale(1.03);
+}
+
+/* Create Quiz Button Styles */
+#create-quiz-btn, #submit-vote, #back-to-list {
+    background-color: lightblue;
+    color: black;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#create-quiz-btn:hover, #submit-vote:hover, #back-to-list:hover {
+    background-color: #3498DB;
+    color: white;
+    transform: scale(1.03);
+}
+
+/* Screen Management */
+.screen {
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none;
 }
