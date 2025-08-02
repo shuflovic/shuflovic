@@ -3,13 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.jpg" type="image/jpg">
-    <title>shuflovic</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
- <body>
-    
-<p>my personal website</p>
-
-        
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Personal Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link active" data-section="about">About Me</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">My Projects</a></li>
+                <li><a href="#python" class="nav-link" data-section="python">Python</a></li>
+                <li><a href="#javascript" class="nav-link" data-section="javascript">JavaScript</a></li>
+                <li><a href="#blog" class="nav-link" data-section="blog">My Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="content-section active">
+            <h2>About Me</h2>
+            <p>Hi, I'm [Your Name]! I'm a passionate developer learning web development and programming. This is a placeholder for your personal introduction. Feel free to share your background, interests, or goals here.</p>
+        </section>
+        <section id="projects" class="content-section">
+            <h2>My Projects</h2>
+            <p>Here are some of my projects hosted on GitHub:</p>
+            <ul>
+                <li><a href="https://github.com/yourusername/project1">Project 1</a> - A brief description of your first project.</li>
+                <li><a href="https://github.com/yourusername/project2">Project 2</a> - A brief description of your second project.</li>
+                <li><a href="https://github.com/yourusername/project3">Project 3</a> - A brief description of your third project.</li>
+            </ul>
+        </section>
+        <section id="python" class="content-section">
+            <h2>Python</h2>
+            <p>This section is for showcasing your Python-related work or skills. You can list Python projects, tutorials, or resources you've created or used. This is dummy text for now.</p>
+        </section>
+        <section id="javascript" class="content-section">
+            <h2>JavaScript</h2>
+            <p>This section highlights your JavaScript skills or projects. Add details about your favorite JavaScript frameworks, libraries, or projects here. This is placeholder content.</p>
+        </section>
+        <section id="blog" class="content-section">
+            <h2>My Blog</h2>
+            <p>Welcome to my blog! Here, I'll share my thoughts on coding, technology, and more. This is a placeholder for your blog posts or links to your blog platform.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
