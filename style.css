@@ -49,6 +49,7 @@ body {
 .sidebar a:hover, .sidebar a.active {
     background-color: #a68a64; /* Lighter brown for hover/active */
     border-radius: 5px;
+    color: black;
 }
 
 header {
