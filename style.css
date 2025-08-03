@@ -114,13 +114,12 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .sidebar {
-        width: 100px;
+        awidth: 100px;
     }
     .right-sidebar {
         display: none;
-        width: 10px;
     }
     header, main {
         amargin: 0 110px;
