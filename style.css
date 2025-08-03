@@ -57,7 +57,6 @@ header {
     color: #f4e8d1; /* Light cream-brown text */
     text-align: center;
     padding: 1rem;
-    /*margin: 0 150px;  Match sidebar widths */
 }
 
 header h1 {
@@ -69,6 +68,7 @@ main {
     margin: 0 160px; /* Adjusted to account for sidebar widths + padding */
     padding: 1rem;
     box-sizing: border-box;
+    min-height: calc(100vh - 80px); /* Ensure main content extends to fill available space */
 }
 
 .content-section {
@@ -100,45 +100,6 @@ a:hover {
     color: #a68a64; /* Lighter brown for link hover */
 }
 
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 800px) {
-    .sidebar {
-        width: 120px; /* Smaller sidebars for narrow screens */
-    }
-    header, main {
-        amargin: 0 130px; /* Adjust margins for smaller sidebars */
-    }
-    .button {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .sidebar {
-        awidth: 100px;
-    }
-    .right-sidebar {
-        display: none;
-    }
-    header, main {
-        amargin: 0 110px;
-    }
-    header h1 {
-        font-size: 1.5rem;
-    }
-    .content-section {
-        padding: 1rem;
-    }
-    .sidebar h2 {
-        font-size: 1.1rem;
-    }
-    .button {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.8rem;
-        margin: 0.3rem;
-    }
-}
 /* Button styles matching left sidebar hover effect */
 .button {
     display: inline-block;
@@ -156,3 +117,83 @@ a:hover {
 
 .button:hover, .button:active {
     background-color: #a68a64; /* Lighter brown, same as sidebar hover/active */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 800px) {
+    .sidebar {
+        width: 120px; /* Smaller sidebars for narrow screens */
+    }
+    header {
+        margin: 0; /* Remove margins for full-width header */
+    }
+    main {
+        margin: 0 130px; /* Adjust margins for smaller sidebars */
+    }
+    .button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100px;
+    }
+    .right-sidebar {
+        display: none; /* Hide right sidebar on mobile */
+    }
+    header {
+        margin: 0; /* Full-width header */
+    }
+    main {
+        margin: 0 110px 0 110px; /* Only account for left sidebar */
+        padding: 1rem;
+        width: calc(100% - 110px); /* Ensure main content takes remaining width */
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .content-section {
+        padding: 1rem;
+    }
+    .sidebar h2 {
+        font-size: 1.1rem;
+    }
+    .button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        margin: 0.3rem;
+    }
+}
+
+/* Mobile-only layout (below 768px) */
+@media screen and (max-width: 767px) {
+    .sidebar {
+        width: 100%; /* Full-width sidebar */
+        position: static; /* Remove fixed positioning */
+        height: auto; /* Allow natural height */
+    }
+    .left-sidebar {
+        margin-bottom: 1rem; /* Space below sidebar */
+    }
+    .right-sidebar {
+        display: none; /* Ensure right sidebar is hidden */
+    }
+    header {
+        margin: 0;
+        padding: 0.5rem;
+    }
+    main {
+        margin: 0; /* Remove margins for full-width content */
+        width: 100%; /* Full width */
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.4rem; /* Slightly smaller for mobile */
+    }
+    .content-section {
+        padding: 1rem;
+        margin: 0; /* Remove any margins */
+    }
+}
