@@ -581,7 +581,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
                 const itemsHtml = data.map(item => {
                     const itemData = Object.entries(item.data)
-                        .map(([key, value]) => `<strong>${key}:</strong> ${value}`)
+                        .map(([key, value]) => `</strong> ${value}`)
                         .join(' | ');
                     return `<div class="item">${item.id}: ${itemData}</div>`;
                 }).join('');
@@ -601,7 +601,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
             try {
                 // Delete items first
-                await supabase
+                await supabaseClient
                     .from('list_items')
                     .delete()
                     .eq('list_id', listId);
