@@ -120,6 +120,7 @@ a:hover {
     }
     .right-sidebar {
         display: none;
+        width: 10px;
     }
     header, main {
         amargin: 0 110px;
