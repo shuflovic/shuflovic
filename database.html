@@ -565,7 +565,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
                     .from('list_items')
                     .select('*')
                     .eq('list_id', listId)
-                    .order('created_at', { ascending: true });
+                    .order('created_at', { ascending: false });
 
                 if (error) {
                     document.getElementById(`items-${listId}`).innerHTML = 'Error loading items';
