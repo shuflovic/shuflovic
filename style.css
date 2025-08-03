@@ -119,23 +119,6 @@ a:hover {
     background-color: #a68a64; /* Lighter brown, same as sidebar hover/active */
 }
 
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 800px) {
-    .sidebar {
-        width: 120px; /* Smaller sidebars for narrow screens */
-    }
-    header {
-        margin: 0; /* Remove margins for full-width header */
-    }
-    main {
-        margin: 0 130px; /* Adjust margins for smaller sidebars */
-    }
-    .button {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100px;
@@ -164,36 +147,5 @@ a:hover {
         padding: 0.3rem 0.6rem;
         font-size: 0.8rem;
         margin: 0.3rem;
-    }
-}
-
-/* Mobile-only layout (below 768px) */
-@media screen and (max-width: 767px) {
-    .sidebar {
-        width: 100%; /* Full-width sidebar */
-        position: static; /* Remove fixed positioning */
-        height: auto; /* Allow natural height */
-    }
-    .left-sidebar {
-        margin-bottom: 1rem; /* Space below sidebar */
-    }
-    .right-sidebar {
-        display: none; /* Ensure right sidebar is hidden */
-    }
-    header {
-        margin: 0;
-        padding: 0.5rem;
-    }
-    main {
-        margin: 0; /* Remove margins for full-width content */
-        width: 100%; /* Full width */
-        padding: 1rem;
-    }
-    header h1 {
-        font-size: 1.4rem; /* Slightly smaller for mobile */
-    }
-    .content-section {
-        padding: 1rem;
-        margin: 0; /* Remove any margins */
     }
 }
