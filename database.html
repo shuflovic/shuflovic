@@ -583,7 +583,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
                     const itemData = Object.entries(item.data)
                         .map(([key, value]) => `</strong> ${value}`)
                         .join(' - ');
-                    return `<div class="item">${item.id}: ${itemData}</div>`;
+                    return `<div class="item"> ${itemData}</div>`;
                 }).join('');
 
                 itemsContainer.innerHTML = itemsHtml;
