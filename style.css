@@ -92,7 +92,8 @@ body {
     top: 0;
     bottom: 0;
     width: 150px; /* Reduced width for better fit on smaller screens */
-    background-color: #8b6f47; /* Medium brown sidebar */
+    /*background-color: #8b6f47; /* Medium brown sidebar */
+    background: linear-gradient(90deg, #8b4513, #cd853f);
     color: #fff;
     padding: 1rem;
     overflow-y: auto;
@@ -145,6 +146,7 @@ main {
     padding: 1rem;
     box-sizing: border-box;
     min-height: calc(100vh - 80px); /* Ensure main content extends to fill available space */
+    background: linear-gradient(90deg, #8b4513, #cd853f);
 }
 
 .content-section {
